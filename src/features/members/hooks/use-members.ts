@@ -38,6 +38,7 @@ export const useMembers = () => {
     } catch (err) {
       const { message } = getApiError(err);
       setError(message);
+      setMembers([]);
     } finally {
       setIsLoading(false);
     }
